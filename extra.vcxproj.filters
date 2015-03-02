@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="eiskaltdcpp\extra\dyndns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\extra\freespace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\extra\ipfilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\extra\lunar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\extra\magnet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\extra\stacktrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\extra\upnpc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="eiskaltdcpp\extra\dyndns.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\extra\freespace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\extra\ipfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\extra\magnet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\extra\upnpc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

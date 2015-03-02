@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="intl\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\eval-plural.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\gettextP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\gmo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\hash-string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\loadinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\localcharset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\lock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\plural-exp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\printf-args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\printf-parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\relocatable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\tsearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\vasnprintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\vasnwprintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\wprintf-parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\xsize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\libintl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="intl\config-msvc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="intl\bindtextdom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\dcgettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\dcigettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\dcngettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\dgettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\dngettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\explodename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\finddomain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\gettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\hash-string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\intl-compat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\l10nflist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\langprefs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\loadmsgcat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\localcharset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\localealias.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\localename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\lock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\ngettext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\plural.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\plural-exp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\printf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\printf-args.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\printf-parse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\relocatable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\textdomain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\tsearch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\vasnprintf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intl\version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

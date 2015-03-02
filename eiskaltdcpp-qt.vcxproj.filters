@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="UI Files">
+      <UniqueIdentifier>{d1a4633a-4a00-4c4e-a3bc-edc1257e234f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Moc Source Files">
+      <UniqueIdentifier>{8527f86f-82a3-4c9a-87ff-f79ce6d6dd61}</UniqueIdentifier>
+      <Extensions>cxx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{41330803-2238-4718-a054-0bb5c0ae2b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{3042cfc6-1848-4f3b-bec0-5145ea4fc93b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ActionCustomizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLSModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Antispam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\AntiSpamFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidgetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ChatEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\CustomFontModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\DebugHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueueModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsersModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileBrowserModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileHasher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfersModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FlowLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\GlobalTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\HashProgress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\LineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Magnet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\MultiLineToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Notification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PMWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubsList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\QueuedUsers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\QuickConnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklistDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsDownloads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsGUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsHistory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsNotification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsPersonal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsSharing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsShortcuts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsUC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowserSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShellCommandRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutGetter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SideBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferViewModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\UCModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\UserListModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\qtsingleapp\qtsinglecoreapplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ActionCustomizer.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ADLS.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ADLSModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Antispam.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_AntiSpamFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ArenaWidget.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ArenaWidgetManager.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ChatEdit.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_CustomFontModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_DownloadQueue.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_DownloadQueueModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EiskaltApp.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonDialog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonFactory.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonObject.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteHubModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteHubs.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteUsers.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteUsersModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FileBrowserModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FileHasher.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FinishedTransfers.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FinishedTransfersModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FlowLayout.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_GlobalTimer.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HashProgress.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HubFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HubManager.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilter.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilterFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilterModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_LineEdit.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Magnet.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MainWindow.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MultiLineToolBar.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Notification.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PMWindow.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubs.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubsList.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_QueuedUsers.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_QuickConnect.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptManagerDialog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchBlacklist.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchBlacklistDialog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Settings.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsConnection.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsDownloads.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsGUI.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsHistory.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsLog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsNotification.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsPersonal.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsSharing.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsShortcuts.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsUC.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShareBrowser.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShareBrowserSearch.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShellCommandRunner.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutEdit.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutGetter.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutManager.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SideBar.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SpyFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SpyModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TabButton.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TabFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ToolBar.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TransferView.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TransferViewModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_UCModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_UserListModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_WulforSettings.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_WulforUtil.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_qtsinglecoreapplication.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ClientManagerScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\HashManagerScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\LogManagerScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\MainWindowScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptConsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ClientManagerScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HashManagerScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_LogManagerScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MainWindowScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptConsole.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptEngine.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\codeeditor\codeeditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_codeeditor.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\HubFrame.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\PrivateMessage.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIAbout.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIActionCustomizer.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIADLSearch.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIADLSearchEditor.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIAntiSpam.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIDialogScriptConsole.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIDownloadQueue.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFavoriteHubEditor.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFavoriteHubs.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFavoriteUsers.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFileHasher.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFinishedTransfers.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIHashProgressDialog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIHubManager.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIIPFilter.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIMagnet.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIPublicHubs.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIPublicHubsList.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIQueuedUsers.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIQuickConnect.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIScriptManager.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISearchBlacklist.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISearchFrame.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettings.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsConnection.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsDownloads.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsGUI.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsHistory.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsLog.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsNotification.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsPersonal.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsSharing.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsShortcuts.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsUC.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIShareBrowser.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIShareBrowserSearch.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISpy.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UITransferView.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIUserCommands.ui">
+      <Filter>UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\be.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\bg.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\cs.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\de.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\el.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\en.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\es.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\fr.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\hu.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\it.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\pl.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\pt_BR.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\ru.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\sk.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\sr%40latin.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\sv_SE.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\uk.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\vi.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\PoolItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\HistoryInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadToHistory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\DebugHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidgetFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ActionCustomizer.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLS.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLSModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Antispam.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\AntiSpamFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidgetManager.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ChatEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\CustomFontModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueue.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueueModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EiskaltApp.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonFactory.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonObject.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubs.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsers.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsersModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileBrowserModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileHasher.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfers.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfersModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FlowLayout.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\GlobalTimer.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\HashProgress.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubManager.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilter.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\LineEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Magnet.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\MultiLineToolBar.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Notification.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PMWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubs.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubsList.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\QueuedUsers.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\QuickConnect.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklist.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklistDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Settings.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsConnection.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsDownloads.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsGUI.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsLog.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsHistory.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsNotification.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsPersonal.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsSharing.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsShortcuts.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsUC.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowser.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowserSearch.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShellCommandRunner.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutGetter.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutManager.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SideBar.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabButton.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabFrame.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ToolBar.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferView.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferViewModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\UCModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\UserListModel.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforSettings.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforUtil.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\qtsingleapp\qtsinglecoreapplication.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ClientManagerScript.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\HashManagerScript.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\LogManagerScript.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\MainWindowScript.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptConsole.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptEngine.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\codeeditor\codeeditor.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="eiskaltdcpp-qt.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="eiskaltdcpp\data\icons\eiskaltdcpp.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

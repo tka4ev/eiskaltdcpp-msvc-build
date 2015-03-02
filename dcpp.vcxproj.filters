@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{b06e9c4d-a298-4a47-9b24-187bb190e0ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="eiskaltdcpp\dcpp\AdcCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\AdcHub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ADLSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\BloomFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\BufferedSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\BufferedSocketListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\BZUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ChatMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\CID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ClientListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ClientManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ClientManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\compiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ConnectionManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ConnectionManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ConnectivityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\CriticalSection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\CryptoManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\DCPlusPlus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\DebugManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\DirectoryListing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Download.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\DownloadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\DownloadManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Encoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FastAlloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FavHubGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FavoriteManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FavoriteUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\File.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FilteredFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FinishedItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FinishedManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\FinishedManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Flags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\format.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\forward.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\HashBloom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\HashManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\HashManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\HashValue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\HttpConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\HubEntry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\LogManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\LogManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\MediaInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\MerkleCheckOutputStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\MerkleTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\NmdcHub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\noexcept.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\nullptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\PerFolderLimit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Pointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\QueueItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\QueueManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\QueueManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ResourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ScriptManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Segment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Semaphore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SettingsManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SFVReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ShareManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SimpleXML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SimpleXMLReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Speaker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SSL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\SSLSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\stdinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Streams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\StringSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\StringTokenizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\TaskQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ThrottleManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\TigerHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\TimerManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Transfer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\typedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Upload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UploadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UploadManagerListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UPnP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UPnPManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\User.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UserCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UserConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\UserConnectionListener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\w.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\Wildcards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="eiskaltdcpp\dcpp\ZUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="eiskaltdcpp\dcpp\AdcCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\AdcHub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ADLSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\BufferedSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\BZUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ChatMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\CID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ClientManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ConnectionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ConnectivityManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\CryptoManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\DCPlusPlus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\DebugManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\DirectoryListing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Download.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\DownloadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\FavoriteManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\File.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\FinishedItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\FinishedManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\HashBloom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\HashManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\HttpConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\LogManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\NmdcHub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\PerFolderLimit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\QueueItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\QueueManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SearchManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SearchQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SearchResult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SettingsManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SFVReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ShareManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SimpleXML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SimpleXMLReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Socket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SSL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\SSLSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\stdinc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\StringTokenizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Thread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ThrottleManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\TigerHash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\TimerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Transfer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Upload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\UploadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\UPnP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\UPnPManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\User.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\UserCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\UserConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\Wildcards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dcpp\ZUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\be.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\bg.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\cs.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\de.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\el.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\en.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\es.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\fr.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\hu.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\it.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\pl.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\pt_BR.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\ru.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\sk.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\sr%40latin.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\sv_SE.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\uk.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\vi.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\zh_CN.po">
+      <Filter>Translation Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

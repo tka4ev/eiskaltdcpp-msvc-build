@@ -1,0 +1,1352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D108E82-6CB4-4B41-919D-243E05DF646F}</ProjectGuid>
+    <RootNamespace>eiskaltdcppqt</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="win32\QtMocRule.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="win32\app-version.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="win32\app-version.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)compiled\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <SourcePath>$(QTDIR)\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)compiled\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\;$(BOOST_ROOT);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\eiskaltdcpp-qt\;$(SolutionDir)eiskaltdcpp\eiskaltdcpp-qt\src\;$(SolutionDir)eiskaltdcpp\eiskaltdcpp-qt\scriptengine\;$(QTDIR)\include;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtScriptTools;$(QTDIR)\include\QtDBus;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\phonon;$(QTDIR)\include\QtXmlPatterns;$(QTDIR)\include\QtWebKit;$(QTDIR)\include\QtHelp;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtScript;$(QTDIR)\include\QtSvg;$(QTDIR)\include\Qt3Support;$(QTDIR)\mkspecs\default;$(SolutionDir)intl;$(SolutionDir)bzip2;$(SolutionDir)zlib;$(SolutionDir)miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;snprintf=_snprintf;_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;QT_DLL;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4100;4121;4127;4189;4244;4290;4307;4324;4355;4510;4512;4610;4706;4800;4996</DisableSpecificWarnings>
+      <ForcedIncludeFiles>$(SolutionDir)eiskaltdcpp-config.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)openssl\lib;$(BOOST_ROOT)stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;unicows.lib;SHFolder.lib;winmm.lib;powrprof.lib;dbghelp.lib;ws2_32.lib;Iphlpapi.lib;libeay32MDd.lib;ssleay32MDd.lib;$(QTDIR)\lib\QtGuid4.lib;$(QTDIR)\lib\QtXmld4.lib;$(QTDIR)\lib\QtNetworkd4.lib;$(QTDIR)\lib\QtCored4.lib;$(QTDIR)\lib\QtScriptd4.lib;$(QTDIR)\lib\qtmaind.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\intl\intl.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\dht\dht.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\extra\extra.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\bzip2\bzip2.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\zlib\zlib.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\miniupnpc\miniupnpc.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\dcpp\dcpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(SolutionDir)compiled\$(Configuration)\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <FixedBaseAddress>false</FixedBaseAddress>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration)\;$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\;$(BOOST_ROOT);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\eiskaltdcpp-qt\;$(SolutionDir)eiskaltdcpp\eiskaltdcpp-qt\src\;$(QTDIR)\include;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;$(QTDIR)\include\ActiveQt;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtDeclarative;$(QTDIR)\include\QtScriptTools;$(QTDIR)\include\QtDBus;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\phonon;$(QTDIR)\include\QtXmlPatterns;$(QTDIR)\include\QtWebKit;$(QTDIR)\include\QtHelp;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtScript;$(QTDIR)\include\QtSvg;$(QTDIR)\include\Qt3Support;$(QTDIR)\mkspecs\default;$(SolutionDir)intl;$(SolutionDir)bzip2;$(SolutionDir)zlib;$(SolutionDir)miniupnpc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;snprintf=_snprintf;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;QT_DLL;QT_GUI_LIB;QT_XML_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4100;4121;4127;4189;4244;4290;4307;4324;4355;4510;4512;4610;4706;4800;4996</DisableSpecificWarnings>
+      <ForcedIncludeFiles>$(SolutionDir)eiskaltdcpp-config.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;unicows.lib;SHFolder.lib;winmm.lib;powrprof.lib;dbghelp.lib;ws2_32.lib;Iphlpapi.lib;libeay32MD.lib;ssleay32MD.lib;$(QTDIR)\lib\QtGui4.lib;$(QTDIR)\lib\QtXml4.lib;$(QTDIR)\lib\QtNetwork4.lib;$(QTDIR)\lib\QtCore4.lib;$(QTDIR)\lib\qtmain.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\intl\intl.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\dht\dht.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\extra\extra.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\bzip2\bzip2.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\zlib\zlib.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\miniupnpc\miniupnpc.lib;$(SolutionDir)build\$(Platform)\$(Configuration)\dcpp\dcpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)openssl\lib;$(BOOST_ROOT)stage\lib</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ActionCustomizer.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ADLS.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ADLSModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Antispam.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_AntiSpamFrame.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ArenaWidget.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ArenaWidgetManager.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ChatEdit.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ClientManagerScript.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_codeeditor.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_CustomFontModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_DownloadQueue.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_DownloadQueueModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EiskaltApp.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonDialog.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonFactory.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonObject.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteHubModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteHubs.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteUsers.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteUsersModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FileBrowserModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FileHasher.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FinishedTransfers.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FinishedTransfersModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FlowLayout.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_GlobalTimer.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HashManagerScript.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HashProgress.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HubFrame.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HubManager.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilter.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilterFrame.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilterModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_LineEdit.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_LogManagerScript.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Magnet.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MainWindow.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MainWindowScript.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MultiLineToolBar.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Notification.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PMWindow.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubs.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubsList.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_qtsinglecoreapplication.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_QueuedUsers.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_QuickConnect.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptConsole.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptEngine.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptManagerDialog.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchBlacklist.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchBlacklistDialog.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchFrame.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Settings.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsConnection.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsDownloads.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsGUI.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsHistory.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsLog.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsNotification.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsPersonal.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsSharing.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsShortcuts.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsUC.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShareBrowser.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShareBrowserSearch.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShellCommandRunner.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutEdit.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutGetter.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutManager.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SideBar.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SpyFrame.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SpyModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TabButton.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TabFrame.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ToolBar.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TransferView.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TransferViewModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_UCModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_UserListModel.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_WulforSettings.cxx" />
+    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_WulforUtil.cxx" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ClientManagerScript.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\HashManagerScript.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\LogManagerScript.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\MainWindowScript.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptConsole.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptEngine.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ActionCustomizer.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLS.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLSModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Antispam.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\AntiSpamFrame.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidget.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidgetManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ChatEdit.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\codeeditor\codeeditor.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\CustomFontModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\DebugHelper.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueue.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueueModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonDialog.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonFactory.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubs.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsers.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsersModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileBrowserModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileHasher.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfers.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfersModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\FlowLayout.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\GlobalTimer.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\HashProgress.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubFrame.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilter.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterFrame.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\LineEdit.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Magnet.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\main.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\MainWindow.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\MultiLineToolBar.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Notification.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PMWindow.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubs.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubsList.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\qtsingleapp\qtsinglecoreapplication.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\QueuedUsers.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\QuickConnect.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklist.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklistDialog.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchFrame.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\Settings.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsConnection.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsDownloads.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsGUI.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsHistory.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsLog.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsNotification.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsPersonal.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsSharing.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsShortcuts.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsUC.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowser.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowserSearch.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShellCommandRunner.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutEdit.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutGetter.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SideBar.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyFrame.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabButton.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabFrame.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ToolBar.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferView.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferViewModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\UCModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\UserListModel.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforSettings.cpp" />
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ClientManagerScript.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\HashManagerScript.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\LogManagerScript.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\MainWindowScript.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptConsole.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptEngine.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\codeeditor\codeeditor.h" />
+    <ClInclude Include="resource.h" />
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ActionCustomizer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLS.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ADLSModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Antispam.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\AntiSpamFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidgetFactory.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cxx"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cxx</Outputs>
+    </ClInclude>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ArenaWidgetManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ChatEdit.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\CustomFontModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\DebugHelper.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cxx"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cxx</Outputs>
+    </ClInclude>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueue.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadQueueModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\DownloadToHistory.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cxx"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cxx</Outputs>
+    </ClInclude>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EiskaltApp.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonDialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonFactory.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\EmoticonObject.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteHubs.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsers.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FavoriteUsersModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileBrowserModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FileHasher.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfers.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FinishedTransfersModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\FlowLayout.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\GlobalTimer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\HashProgress.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\HistoryInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cxx"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cxx</Outputs>
+    </ClInclude>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\HubManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\IPFilterModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\LineEdit.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Magnet.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\MainWindow.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\MultiLineToolBar.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Notification.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PMWindow.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\PoolItem.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cxx"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cxx</Outputs>
+    </ClInclude>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubs.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\PublicHubsList.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\QueuedUsers.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\QuickConnect.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklist.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklistDialog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\Settings.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsConnection.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsDownloads.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsGUI.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsHistory.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\qtsingleapp\qtsinglecoreapplication.h" />
+    <ClInclude Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cxx"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cxx</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cxx</Outputs>
+    </ClInclude>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsLog.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsNotification.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsPersonal.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsSharing.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsShortcuts.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SettingsUC.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowser.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShareBrowserSearch.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShellCommandRunner.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutEdit.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutGetter.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ShortcutManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SideBar.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpyModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabButton.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TabFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ToolBar.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferView.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\TransferViewModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\UCModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\UserListModel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforSettings.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\WulforUtil.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe "%(FullPath)" -o "$(IntDir)moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_%(Filename).cpp</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)moc_%(Filename).cpp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <FileType>Document</FileType>
+    </QtMOC>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\HubFrame.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\PrivateMessage.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIAbout.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIActionCustomizer.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIADLSearch.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIADLSearchEditor.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIAntiSpam.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIDialogScriptConsole.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIDownloadQueue.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFavoriteHubEditor.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFavoriteHubs.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFavoriteUsers.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFileHasher.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIFinishedTransfers.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIHashProgressDialog.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIHubManager.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIIPFilter.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIMagnet.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIPublicHubs.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIPublicHubsList.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIQueuedUsers.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIQuickConnect.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIScriptManager.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISearchBlacklist.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISearchFrame.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettings.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsConnection.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsDownloads.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsGUI.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsHistory.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsLog.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsNotification.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsPersonal.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsSharing.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsShortcuts.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISettingsUC.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIShareBrowser.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIShareBrowserSearch.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UISpy.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UITransferView.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\ui\UIUserCommands.ui">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe -o "$(IntDir)ui_%(Filename).h" "%(FullPath)"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating $(IntDir)%(Filename).ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ui_%(Filename).h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\be.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\bg.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\cs.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\de.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\el.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\en.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\es.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\fr.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\hu.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\it.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\pl.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\pt_BR.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\ru.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\sk.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\sr%40latin.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\sv_SE.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\uk.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\vi.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\eiskaltdcpp-qt\translations\zh_CN.ts">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\lrelease.exe "%(FullPath)" -qm "$(OutDir)resources\qt\ts\%(Filename).qm"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ts-update: (%(Filename)) %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)resources\qt\ts\%(Filename).qm</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="eiskaltdcpp-qt.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="eiskaltdcpp\data\icons\eiskaltdcpp.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="win32\QtMocRule.targets" />
+  </ImportGroup>
+</Project>

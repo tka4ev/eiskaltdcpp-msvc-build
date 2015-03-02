@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{699EB393-774B-4AB5-8951-EDECC2B53812}</ProjectGuid>
+    <RootNamespace>dcpp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.lib</TargetExt>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)boost\stage\lib;$(LibraryPath)</LibraryPath>
+    <CustomBuildAfterTargets>
+    </CustomBuildAfterTargets>
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\dcpp;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)intl;$(SolutionDir)zlib;$(SolutionDir)bzip2</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>snprintf=_snprintf</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DisableSpecificWarnings>4100;4121;4127;4189;4244;4290;4307;4324;4355;4510;4512;4610;4706;4800;4996</DisableSpecificWarnings>
+      <ForcedIncludeFiles>$(SolutionDir)eiskaltdcpp-config.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>
+      </Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>
+      </Outputs>
+      <Inputs>
+      </Inputs>
+      <TreatOutputAsContent>
+      </TreatOutputAsContent>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)win32\pot-update.bat $(ProjectDir) $(OutDir)</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>pot-update</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="eiskaltdcpp\dcpp\AdcCommand.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\AdcHub.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ADLSearch.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Atomic.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\BloomFilter.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\BufferedSocket.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\BufferedSocketListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\BZUtils.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ChatMessage.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\CID.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Client.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ClientListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ClientManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ClientManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\compiler.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ConnectionManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ConnectionManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ConnectivityManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\CriticalSection.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\CryptoManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\DCPlusPlus.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\debug.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\DebugManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\DirectoryListing.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Download.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\DownloadManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\DownloadManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Encoder.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Exception.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FastAlloc.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FavHubGroup.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FavoriteManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FavoriteUser.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\File.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FilteredFile.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FinishedItem.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FinishedManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\FinishedManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Flags.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\format.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\forward.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\HashBloom.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\HashManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\HashManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\HashValue.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\HttpConnection.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\HubEntry.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\LogManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\LogManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\MediaInfo.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\MerkleCheckOutputStream.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\MerkleTree.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\NmdcHub.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\noexcept.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\nullptr.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\PerFolderLimit.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Pointer.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\QueueItem.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\QueueManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\QueueManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ResourceManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ScriptManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchQueue.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SearchResult.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Segment.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Semaphore.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SettingsManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SFVReader.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ShareManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SimpleXML.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SimpleXMLReader.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Singleton.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Socket.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Speaker.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SSL.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\SSLSocket.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\stdinc.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Streams.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\StringSearch.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\StringTokenizer.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\TaskQueue.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Text.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Thread.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ThrottleManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\TigerHash.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\TimerManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Transfer.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\typedefs.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Upload.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UploadManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UploadManagerListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UPnP.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UPnPManager.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\User.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UserCommand.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UserConnection.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\UserConnectionListener.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Util.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\version.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\w.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\Wildcards.h" />
+    <ClInclude Include="eiskaltdcpp\dcpp\ZUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="eiskaltdcpp\dcpp\AdcCommand.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\AdcHub.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ADLSearch.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\BufferedSocket.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\BZUtils.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ChatMessage.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\CID.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Client.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ClientManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ConnectionManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ConnectivityManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\CryptoManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\DCPlusPlus.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\DebugManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\DirectoryListing.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Download.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\DownloadManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Encoder.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Exception.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\FavoriteManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\File.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\FinishedItem.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\FinishedManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\HashBloom.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\HashManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\HttpConnection.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\LogManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\NmdcHub.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\PerFolderLimit.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\QueueItem.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\QueueManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ResourceManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SearchManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SearchQueue.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SearchResult.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SettingsManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SFVReader.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ShareManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SimpleXML.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SimpleXMLReader.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Socket.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SSL.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\SSLSocket.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\stdinc.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\StringTokenizer.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Text.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Thread.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ThrottleManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\TigerHash.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\TimerManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Transfer.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Upload.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\UploadManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\UPnP.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\UPnPManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\User.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\UserCommand.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\UserConnection.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Util.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\version.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\Wildcards.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ZUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\be.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</TreatOutputAsContent>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\bg.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\cs.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\de.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\el.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\en.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\es.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\fr.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\hu.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\it.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\pl.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\pt_BR.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\ru.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\sk.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\sr%40latin.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\sv_SE.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\uk.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\vi.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="eiskaltdcpp\dcpp\po\zh_CN.po">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
