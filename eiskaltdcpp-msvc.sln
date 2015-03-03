@@ -29,6 +29,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "extra", "extra.vcxproj", "{
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "miniupnpc", "miniupnpc.vcxproj", "{EA96E07C-A876-4E04-A812-43F4CB4FA3A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70CE429A-2AD4-40CF-8348-1F7542E75EBD} = {70CE429A-2AD4-40CF-8348-1F7542E75EBD}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dht", "dht.vcxproj", "{8F75E760-BBB0-495E-8796-FFC5D9EB5B63}"
 	ProjectSection(ProjectDependencies) = postProject
