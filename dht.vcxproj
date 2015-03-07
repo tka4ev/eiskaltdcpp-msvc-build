@@ -33,20 +33,24 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MakeDefs\PropertySheet.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MakeDefs\PropertySheet.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\</OutDir>
     <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetExt>.lib</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\</OutDir>
     <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetExt>.lib</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -57,8 +61,7 @@
       <StringPooling>true</StringPooling>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir)eiskaltdcpp;$(SolutionDir)intl;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)zlib;$(SolutionDir)bzip2</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>
-      </PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILDING_DCPP;</PreprocessorDefinitions>
       <ForcedIncludeFiles>$(SolutionDir)eiskaltdcpp-config.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
@@ -66,27 +69,39 @@
       <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+      <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level1</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir)eiskaltdcpp;$(SolutionDir)intl;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)zlib;$(SolutionDir)bzip2</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions />
+      <PreprocessorDefinitions>BUILDING_DCPP;NDEBUG</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
       <ForcedIncludeFiles>$(SolutionDir)eiskaltdcpp-config.h</ForcedIncludeFiles>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="eiskaltdcpp\dht\BootstrapManager.h" />
@@ -101,7 +116,7 @@
     <ClInclude Include="eiskaltdcpp\dht\UDPSocket.h" />
     <ClInclude Include="eiskaltdcpp\dht\Utils.h" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(WITH_DHT)' == 'ON'">
     <ClCompile Include="eiskaltdcpp\dht\BootstrapManager.cpp" />
     <ClCompile Include="eiskaltdcpp\dht\ConnectionManager.cpp" />
     <ClCompile Include="eiskaltdcpp\dht\DHT.cpp" />

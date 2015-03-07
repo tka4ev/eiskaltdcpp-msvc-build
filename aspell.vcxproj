@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4227A62-B35E-46B0-AAC5-F690999829D2}</ProjectGuid>
+    <RootNamespace>aspell</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MakeDefs\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MakeDefs\PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)compiled\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)compiled\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.dll</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)aspell\win32;$(SolutionDir)aspell\common;$(SolutionDir)aspell\interfaces\cc;$(SolutionDir)aspell\modules\speller\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;ENABLE_WIN32_RELOCATABLE;MAKE_ASPELL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <DisableSpecificWarnings>4996;4351;4800;4521;4522</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(IntDir);$(SolutionDir)aspell\win32;$(SolutionDir)aspell\common;$(SolutionDir)aspell\interfaces\cc;$(SolutionDir)aspell\modules\speller\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DisableSpecificWarnings>4996;4351;4800;4521;4522</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_NDEBUG;_CRT_SECURE_NO_WARNINGS;ENABLE_WIN32_RELOCATABLE;MAKE_ASPELL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ImportLibrary>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(USE_ASPELL)' == 'ON'">
+    <ClCompile Include="aspell\common\cache.cpp" />
+    <ClCompile Include="aspell\common\can_have_error.cpp" />
+    <ClCompile Include="aspell\common\config.cpp" />
+    <ClCompile Include="aspell\common\convert.cpp" />
+    <ClCompile Include="aspell\common\document_checker.cpp" />
+    <ClCompile Include="aspell\common\error.cpp" />
+    <ClCompile Include="aspell\common\errors.cpp" />
+    <ClCompile Include="aspell\common\file_data_util.cpp" />
+    <ClCompile Include="aspell\common\file_util.cpp" />
+    <ClCompile Include="aspell\common\filter.cpp" />
+    <ClCompile Include="aspell\common\fstream.cpp" />
+    <ClCompile Include="aspell\common\getdata.cpp" />
+    <ClCompile Include="aspell\common\gettext_init.cpp" />
+    <ClCompile Include="aspell\common\info.cpp" />
+    <ClCompile Include="aspell\common\iostream.cpp" />
+    <ClCompile Include="aspell\common\itemize.cpp" />
+    <ClCompile Include="aspell\common\objstack.cpp" />
+    <ClCompile Include="aspell\common\posib_err.cpp" />
+    <ClCompile Include="aspell\common\speller.cpp" />
+    <ClCompile Include="aspell\common\string.cpp" />
+    <ClCompile Include="aspell\common\string_list.cpp" />
+    <ClCompile Include="aspell\common\string_map.cpp" />
+    <ClCompile Include="aspell\common\strtonum.cpp" />
+    <ClCompile Include="aspell\common\tokenizer.cpp" />
+    <ClCompile Include="aspell\lib\can_have_error-c.cpp" />
+    <ClCompile Include="aspell\lib\config-c.cpp" />
+    <ClCompile Include="aspell\lib\document_checker-c.cpp" />
+    <ClCompile Include="aspell\lib\dummy.cpp" />
+    <ClCompile Include="aspell\lib\error-c.cpp" />
+    <ClCompile Include="aspell\lib\filter-c.cpp" />
+    <ClCompile Include="aspell\lib\find_speller.cpp" />
+    <ClCompile Include="aspell\lib\info-c.cpp" />
+    <ClCompile Include="aspell\lib\mutable_container-c.cpp" />
+    <ClCompile Include="aspell\lib\new_checker.cpp" />
+    <ClCompile Include="aspell\lib\new_config.cpp" />
+    <ClCompile Include="aspell\lib\new_filter.cpp" />
+    <ClCompile Include="aspell\lib\new_fmode.cpp" />
+    <ClCompile Include="aspell\lib\speller-c.cpp" />
+    <ClCompile Include="aspell\lib\string_enumeration-c.cpp" />
+    <ClCompile Include="aspell\lib\string_list-c.cpp" />
+    <ClCompile Include="aspell\lib\string_map-c.cpp" />
+    <ClCompile Include="aspell\lib\string_pair_enumeration-c.cpp" />
+    <ClCompile Include="aspell\lib\word_list-c.cpp" />
+    <ClCompile Include="aspell\modules\filter\context.cpp" />
+    <ClCompile Include="aspell\modules\filter\email.cpp" />
+    <ClCompile Include="aspell\modules\filter\nroff.cpp" />
+    <ClCompile Include="aspell\modules\filter\sgml.cpp" />
+    <ClCompile Include="aspell\modules\filter\tex.cpp" />
+    <ClCompile Include="aspell\modules\filter\texinfo.cpp" />
+    <ClCompile Include="aspell\modules\filter\url.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\affix.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\data.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\editdist.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\language.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\leditdist.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\multi_ws.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\phonet.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\phonetic.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\primes.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\readonly_ws.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\speller_impl.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\suggest.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\typo_editdist.cpp" />
+    <ClCompile Include="aspell\modules\speller\default\writable.cpp" />
+    <ClCompile Include="aspell\modules\tokenizer\basic.cpp" />
+    <ClCompile Include="aspell\win32\dirent.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="aspell\dirs.h.rule">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+perl.exe $(SolutionDir)aspell\gen\mk-dirs_h.pl "C:/Program Files/aspell" lib lib share &gt; $(SolutionDir)build\$(Platform)\$(Configuration)\aspell\dirs.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+perl.exe $(SolutionDir)aspell\gen\mk-dirs_h.pl "C:/Program Files/aspell" lib lib share &gt; $(SolutionDir)build\$(Platform)\$(Configuration)\aspell\dirs.h
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating dirs.h ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Platform)\$(Configuration)\aspell\dirs.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FilePath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating dirs.h ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\$(Platform)\$(Configuration)\aspell\dirs.h</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FilePath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+    <CustomBuild Include="aspell\static_filters.src.cpp.rule">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd $(SolutionDir)aspell\modules\filter
+if %errorlevel% neq 0 goto :cmEnd
+perl.exe $(SolutionDir)aspell\gen\mk-static-filter.pl $(SolutionDir)build\$(Platform)\$(Configuration)\aspell\static_filters.src.cpp url-filter.info email-filter.info tex-filter.info sgml-filter.info html-filter.info context-filter.info nroff-filter.info texinfo-filter.info
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating static_filters.src.cpp ...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd $(SolutionDir)aspell\modules\filter
+if %errorlevel% neq 0 goto :cmEnd
+perl.exe $(SolutionDir)aspell\gen\mk-static-filter.pl $(SolutionDir)build\$(Platform)\$(Configuration)\aspell\static_filters.src.cpp url-filter.info email-filter.info tex-filter.info sgml-filter.info html-filter.info context-filter.info nroff-filter.info texinfo-filter.info
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating static_filters.src.cpp ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Platform)\$(Configuration)\aspell\static_filters.src.cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FilePath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\$(Platform)\$(Configuration)\aspell\static_filters.src.cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FilePath)</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -33,13 +33,15 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MakeDefs\PropertySheet.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MakeDefs\PropertySheet.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\</OutDir>
     <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetExt>.lib</TargetExt>
     <IncludePath>$(IncludePath)</IncludePath>
@@ -48,20 +50,22 @@
     </CustomBuildAfterTargets>
     <CustomBuildBeforeTargets>
     </CustomBuildBeforeTargets>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\</OutDir>
     <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetExt>.lib</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\dcpp;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)intl;$(SolutionDir)zlib;$(SolutionDir)bzip2</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\dcpp;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)intl;$(SolutionDir)zlib;$(SolutionDir)bzip2;$(SolutionDir)lua</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <PreprocessorDefinitions>snprintf=_snprintf</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BUILDING_DCPP;BOOST_ALL_NO_LIB;snprintf=_snprintf</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <DisableSpecificWarnings>4100;4121;4127;4189;4244;4290;4307;4324;4355;4510;4512;4610;4706;4800;4996</DisableSpecificWarnings>
@@ -72,7 +76,7 @@
       <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+      <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -94,7 +98,7 @@
       </TreatOutputAsContent>
     </CustomBuildStep>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)win32\pot-update.bat $(ProjectDir) $(OutDir)</Command>
+      <Command>call $(SolutionDir)win32\pot-update.bat $(ProjectDir) $(IntDir)</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>pot-update</Message>
@@ -103,16 +107,23 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\dcpp;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)intl;$(SolutionDir)zlib;$(SolutionDir)bzip2</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>snprintf=_snprintf</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)build\$(Platform)\$(Configuration);$(SolutionDir);$(SolutionDir)eiskaltdcpp;$(SolutionDir)eiskaltdcpp\dcpp;$(BOOST_ROOT);$(SolutionDir)openssl\include;$(SolutionDir)intl;$(SolutionDir)zlib;$(SolutionDir)bzip2;$(SolutionDir)lua</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_DCPP;BOOST_ALL_NO_LIB;NDEBUG;snprintf=_snprintf</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>true</MinimalRebuild>
       <DisableSpecificWarnings>4100;4121;4127;4189;4244;4290;4307;4324;4355;4510;4512;4610;4706;4800;4996</DisableSpecificWarnings>
       <ForcedIncludeFiles>$(SolutionDir)eiskaltdcpp-config.h</ForcedIncludeFiles>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -120,11 +131,15 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>call $(SolutionDir)win32\pot-update.bat $(ProjectDir) $(OutDir)</Command>
+      <Command>call $(SolutionDir)win32\pot-update.bat $(ProjectDir) $(IntDir)</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>pot-update</Message>
     </PreBuildEvent>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="eiskaltdcpp\dcpp\AdcCommand.h" />
@@ -265,6 +280,7 @@
     <ClCompile Include="eiskaltdcpp\dcpp\QueueItem.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\QueueManager.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\ResourceManager.cpp" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ScriptManager.cpp" Condition="'$(USE_LUA_SCRIPT)' == 'ON'" />
     <ClCompile Include="eiskaltdcpp\dcpp\SearchManager.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\SearchQueue.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\SearchResult.cpp" />
@@ -299,13 +315,13 @@
   <ItemGroup>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\be.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <TreatOutputAsContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</TreatOutputAsContent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -313,12 +329,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\bg.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -326,12 +342,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\cs.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -339,12 +355,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\de.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -352,12 +368,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\el.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -365,12 +381,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\en.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -378,12 +394,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\es.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -391,12 +407,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\fr.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -404,12 +420,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\hu.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -417,12 +433,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\it.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -430,12 +446,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\pl.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -443,12 +459,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\pt_BR.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -456,12 +472,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\ru.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -469,12 +485,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\sk.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -482,12 +498,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\sr%40latin.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -495,12 +511,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\sv_SE.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -508,12 +524,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\uk.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -521,12 +537,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\vi.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -534,12 +550,12 @@
     </CustomBuild>
     <CustomBuild Include="eiskaltdcpp\dcpp\po\zh_CN.po">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(OutDir) $(Configuration) %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\mo-create.bat $(SolutionDir) $(IntDir) $(Configuration) %(Filename)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mo-update: (%(Filename)) - %(FullPath)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)compiled\$(Configuration)\resources\locale\%(Filename)\LC_MESSAGES\libeiskaltdcpp.mo</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>

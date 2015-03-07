@@ -150,9 +150,6 @@
     <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\QuickConnect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -255,237 +252,6 @@
     <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\qtsingleapp\qtsinglecoreapplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ActionCustomizer.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ADLS.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ADLSModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Antispam.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_AntiSpamFrame.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ArenaWidget.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ArenaWidgetManager.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ChatEdit.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_CustomFontModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_DownloadQueue.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_DownloadQueueModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EiskaltApp.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonDialog.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonFactory.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_EmoticonObject.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteHubModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteHubs.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteUsers.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FavoriteUsersModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FileBrowserModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FileHasher.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FinishedTransfers.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FinishedTransfersModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_FlowLayout.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_GlobalTimer.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HashProgress.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HubFrame.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HubManager.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilter.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilterFrame.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_IPFilterModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_LineEdit.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Magnet.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MainWindow.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MultiLineToolBar.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Notification.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PMWindow.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubs.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_PublicHubsList.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_QueuedUsers.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_QuickConnect.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptManagerDialog.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchBlacklist.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchBlacklistDialog.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchFrame.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SearchModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_Settings.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsConnection.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsDownloads.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsGUI.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsHistory.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsLog.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsNotification.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsPersonal.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsSharing.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsShortcuts.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SettingsUC.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShareBrowser.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShareBrowserSearch.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShellCommandRunner.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutEdit.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutGetter.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ShortcutManager.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SideBar.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SpyFrame.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_SpyModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TabButton.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TabFrame.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ToolBar.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TransferView.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_TransferViewModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_UCModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_UserListModel.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_WulforSettings.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_WulforUtil.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_qtsinglecoreapplication.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ClientManagerScript.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -504,28 +270,268 @@
     <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\scriptengine\ScriptEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ClientManagerScript.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_HashManagerScript.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_LogManagerScript.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_MainWindowScript.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptConsole.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_ScriptEngine.cxx">
-      <Filter>Moc Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\codeeditor\codeeditor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="build\Win32\Debug\eiskaltdcpp-qt\moc_codeeditor.cxx">
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpellCheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ActionCustomizer.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ADLS.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ADLSModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_Antispam.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_AntiSpamFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ArenaWidget.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ArenaWidgetManager.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ChatEdit.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ClientManagerScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_codeeditor.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_CustomFontModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_DownloadQueue.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_DownloadQueueModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_EiskaltApp.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_EmoticonDialog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_EmoticonFactory.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_EmoticonObject.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FavoriteHubModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FavoriteHubs.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FavoriteUsers.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FavoriteUsersModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FileBrowserModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FileHasher.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FinishedTransfers.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FinishedTransfersModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_FlowLayout.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_GlobalTimer.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_HashManagerScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_HashProgress.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_HubFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_HubManager.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_IPFilter.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_IPFilterFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_IPFilterModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_LineEdit.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_LogManagerScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_Magnet.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_MainWindow.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_MainWindowScript.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_MultiLineToolBar.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_Notification.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_PMWindow.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_PublicHubModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_PublicHubs.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_PublicHubsList.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_qtsinglecoreapplication.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_QueuedUsers.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_QuickConnect.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ScriptConsole.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ScriptEngine.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ScriptManagerDialog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SearchBlacklist.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SearchBlacklistDialog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SearchFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SearchModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_Settings.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsConnection.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsDownloads.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsGUI.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsHistory.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsLog.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsNotification.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsPersonal.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsSharing.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsShortcuts.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SettingsUC.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ShareBrowser.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ShareBrowserSearch.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ShellCommandRunner.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ShortcutEdit.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ShortcutGetter.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ShortcutManager.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SideBar.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SpyFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SpyModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_TabButton.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_TabFrame.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_ToolBar.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_TransferView.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_TransferViewModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_UCModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_UserListModel.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_WulforSettings.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_WulforUtil.cxx">
+      <Filter>Moc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\$(Platform)\$(Configuration)\$(ProjectName)\moc_SpellCheck.cxx">
       <Filter>Moc Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -864,9 +870,6 @@
     <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\QuickConnect.h">
       <Filter>Header Files</Filter>
     </QtMOC>
-    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.h">
-      <Filter>Header Files</Filter>
-    </QtMOC>
     <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SearchBlacklist.h">
       <Filter>Header Files</Filter>
     </QtMOC>
@@ -988,6 +991,12 @@
       <Filter>Header Files</Filter>
     </QtMOC>
     <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\codeeditor\codeeditor.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\ScriptManagerDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMOC>
+    <QtMOC Include="eiskaltdcpp\eiskaltdcpp-qt\src\SpellCheck.h">
       <Filter>Header Files</Filter>
     </QtMOC>
   </ItemGroup>

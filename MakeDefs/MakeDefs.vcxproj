@@ -15,12 +15,12 @@
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir) %(FullPath) $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir)VersionGlobal.h %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate: (VersionGlobal.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)VersionGlobal.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir) %(FullPath) $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir)VersionGlobal.h %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate: (VersionGlobal.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)VersionGlobal.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -30,12 +30,12 @@
   <ItemGroup>
     <CustomBuild Include="..\eiskaltdcpp\upnp\miniupnpc\miniupnpcstrings.h.cmake">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\ %(FullPath) %(FileName) $(OS)/$(OSVersion) $(MINIUPNPC_VERSION)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\%(FileName) %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate: (miniupnpcstrings.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)miniupnpc\miniupnpcstrings.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\ %(FullPath) %(FileName) $(OS)/$(OSVersion) $(MINIUPNPC_VERSION)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\%(FileName) %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate: (miniupnpcstrings.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)miniupnpc\miniupnpcstrings.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
@@ -79,6 +79,7 @@
     <NMakeCleanCommandLine>del $(SolutionDir)build\VersionGlobal.h</NMakeCleanCommandLine>
     <TargetName>VersionGlobal</TargetName>
     <TargetExt>.h</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>call $(SolutionDir)win32\app-version-gen.bat $(OutDir)..\ $(SolutionDir)eiskaltdcpp\Version.h.in $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</NMakeBuildCommandLine>
@@ -88,13 +89,22 @@
     <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>VersionGlobal</TargetName>
     <TargetExt>.h</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
-      <Command>
-      </Command>
-      <Message>
-      </Message>
+      <Command>call $(SolutionDir)win32\app-config-gen.bat $(SolutionDir)eiskaltdcpp-config.h $(SolutionDir)build\$(Platform)\$(Configuration) $(Configuration)</Command>
+      <Message>Configure ...</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)win32\app-config-gen.bat $(SolutionDir)eiskaltdcpp-config.h $(SolutionDir)build\$(Platform)\$(Configuration) $(Configuration)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Message>Configure ...</Message>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

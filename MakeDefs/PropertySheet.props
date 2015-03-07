@@ -7,8 +7,19 @@
     <SOVERSION>2.3</SOVERSION>
     <VERSION_SUFFIX>GIT</VERSION_SUFFIX>
     <MINIUPNPC_VERSION>1.8</MINIUPNPC_VERSION>
+    <USE_JS>ON</USE_JS>
+    <FREE_SPACE_BAR_C>ON</FREE_SPACE_BAR_C>
+    <USE_MINIUPNP>ON</USE_MINIUPNP>
+    <USE_QT_QML>OFF</USE_QT_QML>
+    <USE_QT_SQLITE>ON</USE_QT_SQLITE>
+    <USE_ASPELL>ON</USE_ASPELL>
+    <USE_PERL_REGEX>OFF</USE_PERL_REGEX>
+    <USE_LUA_SCRIPT>ON</USE_LUA_SCRIPT>
+    <USE_DHT>OFF</USE_DHT>
   </PropertyGroup>
-  <PropertyGroup />
+  <PropertyGroup>
+    <_PropertySheetDisplayName>BuildConfig</_PropertySheetDisplayName>
+  </PropertyGroup>
   <ItemDefinitionGroup />
   <ItemGroup>
     <BuildMacro Include="PROJECT_NAME">
@@ -29,6 +40,42 @@
     </BuildMacro>
     <BuildMacro Include="MINIUPNPC_VERSION">
       <Value>$(MINIUPNPC_VERSION)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_JS">
+      <Value>$(USE_JS)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FREE_SPACE_BAR_C">
+      <Value>$(FREE_SPACE_BAR_C)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_MINIUPNP">
+      <Value>$(USE_MINIUPNP)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_QT_QML">
+      <Value>$(USE_QT_QML)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_QT_SQLITE">
+      <Value>$(USE_QT_SQLITE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_ASPELL">
+      <Value>$(USE_ASPELL)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_PERL_REGEX">
+      <Value>$(USE_PERL_REGEX)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_LUA_SCRIPT">
+      <Value>$(USE_LUA_SCRIPT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_DHT">
+      <Value>$(USE_DHT)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>
