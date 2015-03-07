@@ -1,0 +1,4 @@
+[submodule "eiskaltdcpp"]
+	path = eiskaltdcpp
+	url = https://github.com/tka4ev/eiskaltdcpp.git
+	branch = msvc-12
