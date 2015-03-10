@@ -16,7 +16,7 @@
   *   `2. D:\dev\boost> bootstrap <type enter>`
   *   `3. D:\dev\boost> b2 ^ <type enter>`
   *   `4. More? --build-dir="d:\dev\boost-build" ^ <type enter>`
-  *   `**5.** More? --stagedir=stage32 --build-type=complete msvc stage ^ <type enter>`
+  *   `5. More? --stagedir=stage32 --build-type=complete msvc stage ^ <type enter>`
   *   `6. More? --with-system --with-thread --with-chrono --with-date_time <type enter>`
   *   >if need x64 build replace line 5: 
   *   **5.** More? --stagedir=stage64 --build-type=complete msvc stage **address-model=64 architecture=x86** ^
