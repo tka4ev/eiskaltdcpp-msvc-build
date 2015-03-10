@@ -7,15 +7,18 @@
     <SOVERSION>2.3</SOVERSION>
     <VERSION_SUFFIX>GIT</VERSION_SUFFIX>
     <MINIUPNPC_VERSION>1.8</MINIUPNPC_VERSION>
-    <USE_JS>ON</USE_JS>
-    <FREE_SPACE_BAR_C>ON</FREE_SPACE_BAR_C>
-    <USE_MINIUPNP>ON</USE_MINIUPNP>
+    <QTDIR>g:\dev\qt\qt-5.4.1-x64-msvc2013\qt-5.4.1-x64-msvc2013\</QTDIR>
+    <QTSOURCE>g:\dev\qt\qt-5.4.1-x64-msvc2013\qt-everywhere-opensource-src-5.4.1\qtbase\</QTSOURCE>
+    <USE_QT>5</USE_QT>
     <USE_QT_QML>OFF</USE_QT_QML>
     <USE_QT_SQLITE>ON</USE_QT_SQLITE>
+    <USE_JS>ON</USE_JS>
+    <USE_MINIUPNP>ON</USE_MINIUPNP>
     <USE_ASPELL>ON</USE_ASPELL>
     <USE_PERL_REGEX>OFF</USE_PERL_REGEX>
     <USE_LUA_SCRIPT>ON</USE_LUA_SCRIPT>
     <USE_DHT>OFF</USE_DHT>
+    <USE_FREE_SPACE_BAR>ON</USE_FREE_SPACE_BAR>
   </PropertyGroup>
   <PropertyGroup>
     <_PropertySheetDisplayName>BuildConfig</_PropertySheetDisplayName>
@@ -42,16 +45,16 @@
       <Value>$(MINIUPNPC_VERSION)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
-    <BuildMacro Include="USE_JS">
-      <Value>$(USE_JS)</Value>
+    <BuildMacro Include="QTDIR">
+      <Value>$(QTDIR)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
-    <BuildMacro Include="FREE_SPACE_BAR_C">
-      <Value>$(FREE_SPACE_BAR_C)</Value>
+    <BuildMacro Include="QTSOURCE">
+      <Value>$(QTSOURCE)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
-    <BuildMacro Include="USE_MINIUPNP">
-      <Value>$(USE_MINIUPNP)</Value>
+    <BuildMacro Include="USE_QT">
+      <Value>$(USE_QT)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
     <BuildMacro Include="USE_QT_QML">
@@ -60,6 +63,14 @@
     </BuildMacro>
     <BuildMacro Include="USE_QT_SQLITE">
       <Value>$(USE_QT_SQLITE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_JS">
+      <Value>$(USE_JS)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_MINIUPNP">
+      <Value>$(USE_MINIUPNP)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
     <BuildMacro Include="USE_ASPELL">
@@ -76,6 +87,10 @@
     </BuildMacro>
     <BuildMacro Include="USE_DHT">
       <Value>$(USE_DHT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="USE_FREE_SPACE_BAR">
+      <Value>$(USE_FREE_SPACE_BAR)</Value>
       <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>

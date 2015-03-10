@@ -5,41 +5,71 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\eiskaltdcpp\Version.h.in">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DeploymentContent>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir)VersionGlobal.h %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir)VersionGlobal.h %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate: (VersionGlobal.h) ...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate: (VersionGlobal.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)VersionGlobal.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)VersionGlobal.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir)VersionGlobal.h %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">call $(SolutionDir)win32\app-version-gen.bat $(OutDir)VersionGlobal.h %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate: (VersionGlobal.h) ...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate: (VersionGlobal.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)VersionGlobal.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)VersionGlobal.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\eiskaltdcpp\upnp\miniupnpc\miniupnpcstrings.h.cmake">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\%(FileName) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\%(FileName) %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate: (miniupnpcstrings.h) ...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate: (miniupnpcstrings.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)miniupnpc\miniupnpcstrings.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)miniupnpc\miniupnpcstrings.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\%(FileName) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">call $(SolutionDir)win32\upnp-version-gen.bat $(OutDir)miniupnpc\%(FileName) %(FullPath)</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate: (miniupnpcstrings.h) ...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate: (miniupnpcstrings.h) ...</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)miniupnpc\miniupnpcstrings.h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)miniupnpc\miniupnpcstrings.h</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath)</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -52,7 +82,17 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
@@ -64,12 +104,32 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="PropertySheet.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="PropertySheet.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>$(SolutionDir)win32\app-version-gen.bat $(SolutionDir)build\$(Platform)\$(Configuration)\ $(SolutionDir)eiskaltdcpp\Version.h.in $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</NMakeBuildCommandLine>
+    <NMakeOutput>VersionGlobal.h</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <NMakeReBuildCommandLine>call $(SolutionDir)win32\app-version-gen.bat $(OutDir) $(SolutionDir)eiskaltdcpp\Version.h.in $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>del $(SolutionDir)build\VersionGlobal.h</NMakeCleanCommandLine>
+    <TargetName>VersionGlobal</TargetName>
+    <TargetExt>.h</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakeBuildCommandLine>$(SolutionDir)win32\app-version-gen.bat $(SolutionDir)build\$(Platform)\$(Configuration)\ $(SolutionDir)eiskaltdcpp\Version.h.in $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</NMakeBuildCommandLine>
     <NMakeOutput>VersionGlobal.h</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
@@ -91,7 +151,23 @@
     <TargetExt>.h</TargetExt>
     <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>call $(SolutionDir)win32\app-version-gen.bat $(OutDir)..\ $(SolutionDir)eiskaltdcpp\Version.h.in $(PROJECT_NAME) $(VERSION) $(SOVERSION) $(VERSION_SUFFIX)</NMakeBuildCommandLine>
+    <NMakeOutput>MakeDefs.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>VersionGlobal</TargetName>
+    <TargetExt>.h</TargetExt>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)win32\app-config-gen.bat $(SolutionDir)eiskaltdcpp-config.h $(SolutionDir)build\$(Platform)\$(Configuration) $(Configuration)</Command>
+      <Message>Configure ...</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PreBuildEvent>
       <Command>call $(SolutionDir)win32\app-config-gen.bat $(SolutionDir)eiskaltdcpp-config.h $(SolutionDir)build\$(Platform)\$(Configuration) $(Configuration)</Command>
       <Message>Configure ...</Message>
@@ -102,7 +178,17 @@
       <Command>call $(SolutionDir)win32\app-config-gen.bat $(SolutionDir)eiskaltdcpp-config.h $(SolutionDir)build\$(Platform)\$(Configuration) $(Configuration)</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Command>call $(SolutionDir)win32\app-config-gen.bat $(SolutionDir)eiskaltdcpp-config.h $(SolutionDir)build\$(Platform)\$(Configuration) $(Configuration)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Message>Configure ...</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PreBuildEvent>
       <Message>Configure ...</Message>
     </PreBuildEvent>

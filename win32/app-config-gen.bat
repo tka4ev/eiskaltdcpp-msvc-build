@@ -18,6 +18,21 @@ set BuildMode=%3
 @echo #define CLIENT_SCRIPTS_DIR "resources/qt/qtscripts" >>  !Config!
 @echo. >>  !Config!
 
+rem @echo #define USE_QT >> !Config!
+
+if "%USE_QT%" == "5" (
+rem     @echo #define USE_QT5 >> !Config!
+rem     @echo. >>  !Config!
+    @echo #ifndef _WINSOCKAPI_ >> !Config!
+    @echo #  define _WINSOCKAPI_ >> !Config!
+    @echo #endif >> !Config!
+    @echo. >>  !Config!
+    @echo #ifndef Q_WS_WIN >> !Config!
+    @echo #  define Q_WS_WIN >> !Config!
+    @echo #endif >> !Config!
+    @echo. >>  !Config!
+)
+
 if "%USE_QT_QML%" == "ON" (
     @echo #define USE_QML >> !Config!
     @set USE_JS="ON"
@@ -37,7 +52,7 @@ if "%USE_DHT%" == "ON" (
     @echo #undef WITH_DHT >> !Config!
 )
 
-if "%FREE_SPACE_BAR_C%" == "ON" (
+if "%USE_FREE_SPACE_BAR%" == "ON" (
     @echo #define FREE_SPACE_BAR_C >> !Config!
 ) else (
     @echo #undef FREE_SPACE_BAR_C >> !Config!
@@ -75,28 +90,89 @@ if "%USE_LUA_SCRIPT%" == "ON" (
 
 @echo. >>  !Config!
 
+if "%USE_QT%" == "4" (
+    if "!BuildMode!" == "Release" (
+        @echo #pragma comment^(lib, "QtCore4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtGui4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtXml4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtNetwork4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtMultimedia4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "qtmain.lib"^) >> !Config!
+    ) else (
+        @echo #pragma comment^(lib, "QtCored4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtGuid4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtXmld4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtNetworkd4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "QtMultimediad4.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "qtmaind.lib"^) >> !Config!
+    )
+) else (
+    if "!BuildMode!" == "Release" (
+        @echo #pragma comment^(lib, "Qt5Core.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Gui.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Widgets.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Xml.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Network.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Multimedia.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Concurrent.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "qtmain.lib"^) >> !Config!
+    ) else (
+        @echo #pragma comment^(lib, "Qt5Cored.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Guid.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Widgetsd.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Xmld.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Networkd.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Multimediad.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "Qt5Concurrentd.lib"^) >> !Config!
+        @echo #pragma comment^(lib, "qtmaind.lib"^) >> !Config!
+    )
+)
 
 if "%USE_QT_QML%" == "ON" (
-    @if "!BuildMode!" == "Release" (
-        @echo #pragma comment^(lib, "QtDeclarative4.lib"^) >> !Config!
+    if "%USE_QT%" == "4" (
+        @if "!BuildMode!" == "Release" (
+            @echo #pragma comment^(lib, "QtDeclarative4.lib"^) >> !Config!
+        ) else (
+            @echo #pragma comment^(lib, "QtDeclaratived4.lib"^) >> !Config!
+        )
     ) else (
-        @echo #pragma comment^(lib, "QtDeclaratived4.lib"^) >> !Config!
+        @if "!BuildMode!" == "Release" (
+            @echo #pragma comment^(lib, "Qt5Declarative.lib"^) >> !Config!
+        ) else (
+            @echo #pragma comment^(lib, "Qt5Declaratived.lib"^) >> !Config!
+        )
     )
 )
 
 if "%USE_JS%" == "ON" (
-    @if "!BuildMode!" == "Release" (
-        @echo #pragma comment^(lib, "QtScript4.lib"^) >> !Config!
+    if "%USE_QT%" == "4" (
+        @if "!BuildMode!" == "Release" (
+            @echo #pragma comment^(lib, "QtScript4.lib"^) >> !Config!
+        ) else (
+            @echo #pragma comment^(lib, "QtScriptd4.lib"^) >> !Config!
+        )
     ) else (
-        @echo #pragma comment^(lib, "QtScriptd4.lib"^) >> !Config!
+        @if "!BuildMode!" == "Release" (
+            @echo #pragma comment^(lib, "Qt5Script.lib"^) >> !Config!
+        ) else (
+            @echo #pragma comment^(lib, "Qt5Scriptd.lib"^) >> !Config!
+        )
     )
 )
 
 if "%USE_QT_SQLITE%" == "ON" (
-    @if "!BuildMode!" == "Release" (
-        @echo #pragma comment^(lib, "QtSql4.lib"^) >> !Config!
+    if "%USE_QT%" == "4" (
+        @if "!BuildMode!" == "Release" (
+            @echo #pragma comment^(lib, "QtSql4.lib"^) >> !Config!
+        ) else (
+            @echo #pragma comment^(lib, "QtSqld4.lib"^) >> !Config!
+        )
     ) else (
-        @echo #pragma comment^(lib, "QtSqld4.lib"^) >> !Config!
+        @if "!BuildMode!" == "Release" (
+            @echo #pragma comment^(lib, "Qt5Sql.lib"^) >> !Config!
+        ) else (
+            @echo #pragma comment^(lib, "Qt5Sqld.lib"^) >> !Config!
+        )
     )
 )
 
