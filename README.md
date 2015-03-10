@@ -12,14 +12,14 @@
   *   unpack boost source (example to: d:\dev\boost) 
   *   add environment variable **BOOST_ROOT** (example: BOOST_ROOT=d:\dev\boost\) 
   *   open visual studio "Developer Command Prompt" from main windows menu and type: 
-  *   **1.** C:\Program Files (x86)\Microsoft Visual Studio 12.0> d: & cd d:\dev\boost <type enter> 
-  *   **2.** D:\dev\boost> bootstrap <type enter> 
-  *   **3.** D:\dev\boost> b2 ^ <type enter> 
-  *   **4.** More? --build-dir="d:\dev\boost-build" ^ <type enter> 
+  *   1. C:\Program Files (x86)\Microsoft Visual Studio 12.0> d: & cd d:\dev\boost <type enter> 
+  *   2. D:\dev\boost> bootstrap <type enter> 
+  *   3. D:\dev\boost> b2 ^ <type enter> 
+  *   4. More? --build-dir="d:\dev\boost-build" ^ <type enter> 
   *   **5.** More? --stagedir=stage32 --build-type=complete msvc stage ^ <type enter> 
-  *   **6.** More? --with-system --with-thread --with-chrono --with-date_time <type enter> 
+  *   6. More? --with-system --with-thread --with-chrono --with-date_time <type enter> 
   *   if need x64 build replace line 5: 
-  *   **5.** More? --stagedir=stage64 --build-type=complete msvc stage address-model=64 architecture=x86 ^
+  *   **5.** More? --stagedir=stage64 --build-type=complete msvc stage **address-model=64 architecture=x86** ^
 * Open eiskaltdcpp-msvc.sln with visual studio 
   *   goto "View\Other Windows\Property Manager\eiskaltdcpp-qt\Release|Win32\BuildConfig\User Macros" 
   *   set **QTDIR** to d:\dev\qt-4.8.6-x86-msvc2013\ 
