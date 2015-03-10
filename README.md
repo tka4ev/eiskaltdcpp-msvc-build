@@ -2,7 +2,7 @@
 
 ## Instruction: ##
 
-* Install Microsoft Visual Studo 2013 community edition.
+* [Install Microsoft Visual Studo 2013 community edition](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).
 * [Install Qt4|Qt5](http://sourceforge.net/projects/qtx64/files/) (example to: d:\dev\) - required version (4.8.6|5.4.1) 
 * [Install gettext](http://mlocati.github.io/gettext-iconv-windows/), required utilites - (msgattrib.exe | msgmerge.exe | msgfmt.exe | xgettext.exe) 
   *   add location to utilites in the environment variable "PATH" 
@@ -18,7 +18,7 @@
   *   `4. More? --build-dir="d:\dev\boost-build" ^ <type enter>`
   *   `5. More? --stagedir=stage32 --build-type=complete msvc stage ^ <type enter>`
   *   `6. More? --with-system --with-thread --with-chrono --with-date_time <type enter>`
-  *   >if need x64 build replace line 5: 
+  *   if need x64 build replace line 5: 
   *   **5.** More? --stagedir=stage64 --build-type=complete msvc stage **address-model=64 architecture=x86** ^
 * Open eiskaltdcpp-msvc.sln with visual studio 
   *   goto "View\Other Windows\Property Manager\eiskaltdcpp-qt\Release|Win32\BuildConfig\User Macros" 
