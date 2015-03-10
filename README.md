@@ -29,5 +29,5 @@
         - set USE_QT to (4 or 5) (dependecy from installed Qt version 4 or 5).
         - set other (optional) build options.
 - Set build mode (Debug-Win32|Debug-x64|Release-Win32|Release-x64) and build app (x64 build unstable and more warnings).
-- To correctly display the type of "Qt" (QString|QMap|...) in the debugger, set "qt5.natvis" or "autoexp.dat" from the folder 
+- To correctly display the type of "Qt" (QString|QMap|...) in the debugger, set "qt5.natvis" or "autoexp.dat" from the folder
         - "win32\for_debugging". Installation instructions, see the Internet.
