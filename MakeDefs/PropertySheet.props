@@ -7,9 +7,9 @@
     <SOVERSION>2.3</SOVERSION>
     <VERSION_SUFFIX>GIT</VERSION_SUFFIX>
     <MINIUPNPC_VERSION>1.8</MINIUPNPC_VERSION>
-    <QTDIR>g:\dev\qt\qt-5.4.1-x64-msvc2013\qt-5.4.1-x64-msvc2013\</QTDIR>
-    <QTSOURCE>g:\dev\qt\qt-5.4.1-x64-msvc2013\qt-everywhere-opensource-src-5.4.1\qtbase\</QTSOURCE>
-    <USE_QT>5</USE_QT>
+    <QTDIR>g:\dev\qt\qt-4.8.6-x86-msvc2013\</QTDIR>
+    <QTSOURCE>g:\dev\qt\qt-4.8.6-x86-msvc2013\src\</QTSOURCE>
+    <USE_QT>4</USE_QT>
     <USE_QT_QML>OFF</USE_QT_QML>
     <USE_QT_SQLITE>ON</USE_QT_SQLITE>
     <USE_JS>ON</USE_JS>

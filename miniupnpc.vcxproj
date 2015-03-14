@@ -222,18 +222,40 @@
     <ClInclude Include="eiskaltdcpp\upnp\miniupnpc\upnperrors.h" />
     <ClInclude Include="eiskaltdcpp\upnp\miniupnpc\upnpreplyparse.h" />
   </ItemGroup>
-  <ItemGroup Condition="'$(USE_MINIUPNP)' == 'ON'">
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\connecthostport.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\igd_desc_parse.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\minisoap.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\miniupnpc.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\miniwget.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\minixml.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\portlistingparse.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\receivedata.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\upnpcommands.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\upnperrors.c" />
-    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\upnpreplyparse.c" />
+  <ItemGroup>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\connecthostport.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\igd_desc_parse.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\minisoap.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\miniupnpc.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\miniwget.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\minixml.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\portlistingparse.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\receivedata.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\upnpcommands.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\upnperrors.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\upnp\miniupnpc\upnpreplyparse.c">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -425,7 +425,9 @@
     <ClCompile Include="eiskaltdcpp\dcpp\QueueItem.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\QueueManager.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\ResourceManager.cpp" />
-    <ClCompile Include="eiskaltdcpp\dcpp\ScriptManager.cpp" Condition="'$(USE_LUA_SCRIPT)' == 'ON'" />
+    <ClCompile Include="eiskaltdcpp\dcpp\ScriptManager.cpp">
+      <ExcludedFromBuild Condition="'$(USE_LUA_SCRIPT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="eiskaltdcpp\dcpp\SearchManager.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\SearchQueue.cpp" />
     <ClCompile Include="eiskaltdcpp\dcpp\SearchResult.cpp" />

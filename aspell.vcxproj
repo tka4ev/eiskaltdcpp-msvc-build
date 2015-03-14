@@ -180,73 +180,205 @@
       <ImportLibrary>$(SolutionDir)build\$(Platform)\$(Configuration)\libs\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup Condition="'$(USE_ASPELL)' == 'ON'">
-    <ClCompile Include="aspell\common\cache.cpp" />
-    <ClCompile Include="aspell\common\can_have_error.cpp" />
-    <ClCompile Include="aspell\common\config.cpp" />
-    <ClCompile Include="aspell\common\convert.cpp" />
-    <ClCompile Include="aspell\common\document_checker.cpp" />
-    <ClCompile Include="aspell\common\error.cpp" />
-    <ClCompile Include="aspell\common\errors.cpp" />
-    <ClCompile Include="aspell\common\file_data_util.cpp" />
-    <ClCompile Include="aspell\common\file_util.cpp" />
-    <ClCompile Include="aspell\common\filter.cpp" />
-    <ClCompile Include="aspell\common\fstream.cpp" />
-    <ClCompile Include="aspell\common\getdata.cpp" />
-    <ClCompile Include="aspell\common\gettext_init.cpp" />
-    <ClCompile Include="aspell\common\info.cpp" />
-    <ClCompile Include="aspell\common\iostream.cpp" />
-    <ClCompile Include="aspell\common\itemize.cpp" />
-    <ClCompile Include="aspell\common\objstack.cpp" />
-    <ClCompile Include="aspell\common\posib_err.cpp" />
-    <ClCompile Include="aspell\common\speller.cpp" />
-    <ClCompile Include="aspell\common\string.cpp" />
-    <ClCompile Include="aspell\common\string_list.cpp" />
-    <ClCompile Include="aspell\common\string_map.cpp" />
-    <ClCompile Include="aspell\common\strtonum.cpp" />
-    <ClCompile Include="aspell\common\tokenizer.cpp" />
-    <ClCompile Include="aspell\lib\can_have_error-c.cpp" />
-    <ClCompile Include="aspell\lib\config-c.cpp" />
-    <ClCompile Include="aspell\lib\document_checker-c.cpp" />
-    <ClCompile Include="aspell\lib\dummy.cpp" />
-    <ClCompile Include="aspell\lib\error-c.cpp" />
-    <ClCompile Include="aspell\lib\filter-c.cpp" />
-    <ClCompile Include="aspell\lib\find_speller.cpp" />
-    <ClCompile Include="aspell\lib\info-c.cpp" />
-    <ClCompile Include="aspell\lib\mutable_container-c.cpp" />
-    <ClCompile Include="aspell\lib\new_checker.cpp" />
-    <ClCompile Include="aspell\lib\new_config.cpp" />
-    <ClCompile Include="aspell\lib\new_filter.cpp" />
-    <ClCompile Include="aspell\lib\new_fmode.cpp" />
-    <ClCompile Include="aspell\lib\speller-c.cpp" />
-    <ClCompile Include="aspell\lib\string_enumeration-c.cpp" />
-    <ClCompile Include="aspell\lib\string_list-c.cpp" />
-    <ClCompile Include="aspell\lib\string_map-c.cpp" />
-    <ClCompile Include="aspell\lib\string_pair_enumeration-c.cpp" />
-    <ClCompile Include="aspell\lib\word_list-c.cpp" />
-    <ClCompile Include="aspell\modules\filter\context.cpp" />
-    <ClCompile Include="aspell\modules\filter\email.cpp" />
-    <ClCompile Include="aspell\modules\filter\nroff.cpp" />
-    <ClCompile Include="aspell\modules\filter\sgml.cpp" />
-    <ClCompile Include="aspell\modules\filter\tex.cpp" />
-    <ClCompile Include="aspell\modules\filter\texinfo.cpp" />
-    <ClCompile Include="aspell\modules\filter\url.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\affix.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\data.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\editdist.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\language.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\leditdist.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\multi_ws.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\phonet.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\phonetic.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\primes.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\readonly_ws.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\speller_impl.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\suggest.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\typo_editdist.cpp" />
-    <ClCompile Include="aspell\modules\speller\default\writable.cpp" />
-    <ClCompile Include="aspell\modules\tokenizer\basic.cpp" />
-    <ClCompile Include="aspell\win32\dirent.c" />
+  <ItemGroup>
+    <ClCompile Include="aspell\common\cache.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\can_have_error.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\config.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\convert.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\document_checker.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\error.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\errors.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\file_data_util.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\file_util.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\filter.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\fstream.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\getdata.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\gettext_init.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\info.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\iostream.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\itemize.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\objstack.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\posib_err.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\speller.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\string.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\string_list.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\string_map.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\strtonum.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\common\tokenizer.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\can_have_error-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\config-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\document_checker-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\dummy.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\error-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\filter-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\find_speller.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\info-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\mutable_container-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\new_checker.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\new_config.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\new_filter.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\new_fmode.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\speller-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\string_enumeration-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\string_list-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\string_map-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\string_pair_enumeration-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\lib\word_list-c.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\context.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\email.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\nroff.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\sgml.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\tex.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\texinfo.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\filter\url.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\affix.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\data.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\editdist.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\language.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\leditdist.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\multi_ws.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\phonet.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\phonetic.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\primes.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\readonly_ws.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\speller_impl.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\suggest.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\typo_editdist.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\speller\default\writable.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\modules\tokenizer\basic.cpp">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="aspell\win32\dirent.c">
+      <ExcludedFromBuild Condition="'$(USE_ASPELL)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="aspell\dirs.h.rule">

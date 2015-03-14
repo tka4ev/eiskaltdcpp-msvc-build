@@ -207,17 +207,37 @@
     <ClInclude Include="eiskaltdcpp\dht\UDPSocket.h" />
     <ClInclude Include="eiskaltdcpp\dht\Utils.h" />
   </ItemGroup>
-  <ItemGroup Condition="'$(USE_DHT)' == 'ON'">
-    <ClCompile Include="eiskaltdcpp\dht\BootstrapManager.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\ConnectionManager.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\DHT.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\IndexManager.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\KBucket.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\SearchManager.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\stdafx.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\TaskManager.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\UDPSocket.cpp" />
-    <ClCompile Include="eiskaltdcpp\dht\Utils.cpp" />
+  <ItemGroup>
+    <ClCompile Include="eiskaltdcpp\dht\BootstrapManager.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\ConnectionManager.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\DHT.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\IndexManager.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\KBucket.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\SearchManager.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\stdafx.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\TaskManager.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\UDPSocket.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="eiskaltdcpp\dht\Utils.cpp">
+      <ExcludedFromBuild Condition="'$(USE_DHT)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

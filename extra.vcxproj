@@ -201,10 +201,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="eiskaltdcpp\extra\dyndns.cpp" />
-    <ClCompile Include="eiskaltdcpp\extra\freespace.cpp" Condition="'$(USE_FREE_SPACE_BAR)' == 'ON'" />
+    <ClCompile Include="eiskaltdcpp\extra\freespace.cpp">
+      <ExcludedFromBuild Condition="'$(USE_FREE_SPACE_BAR)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="eiskaltdcpp\extra\ipfilter.cpp" />
     <ClCompile Include="eiskaltdcpp\extra\magnet.cpp" />
-    <ClCompile Include="eiskaltdcpp\extra\upnpc.cpp" Condition="'$(USE_MINIUPNP)' == 'ON'" />
+    <ClCompile Include="eiskaltdcpp\extra\upnpc.cpp">
+      <ExcludedFromBuild Condition="'$(USE_MINIUPNP)' == 'OFF'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
