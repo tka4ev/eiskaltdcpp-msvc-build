@@ -10,7 +10,7 @@
   *   add location in the environment variable "PATH"
 * [Get boost source](http://www.boost.org/users/download/)
   *   unpack boost source (example to: d:\dev\boost) 
-  *   add environment variable **BOOST_ROOT** (example: BOOST_ROOT=d:\dev\boost\) 
+  *   add environment variable **BOOST_ROOT** (example: BOOST_ROOT=d:\dev\boost\\) 
   *   open visual studio "Developer Command Prompt" from main windows menu and type: 
   *   `1. C:\Program Files (x86)\Microsoft Visual Studio 12.0> d: & cd d:\dev\boost <type enter>`
   *   `2. D:\dev\boost> bootstrap <type enter>`
@@ -24,7 +24,7 @@
   *   goto "View\Other Windows\Property Manager\eiskaltdcpp-qt\Release|Win32\BuildConfig\User Macros" 
   *   set **QTDIR** to d:\dev\qt-4.8.6-x86-msvc2013\ 
   *   set **USE_QT** to (4 or 5) (dependecy from installed Qt version 4 or 5). 
-  *   set other (optional) build options.
+  *   set other (optional) build options (ON|OFF).
 * Set build mode (Debug-Win32|Debug-x64|Release-Win32|Release-x64) and build app 
   *   (x64 build unstable and more warnings).
 * To correctly display the type of "Qt" (QString|QMap|...) in the debugger 
